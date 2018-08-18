@@ -10,7 +10,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
   }
    console.log('Connected to MongoDB server');
 
-//inserting table or collection name TodoApp
+//creating database name 'TodoApp' and inserting data into table or  collection name 'Todos'
   const db = client.db('TodoApp');
   db.collection('Todos').insertOne({
     text: 'something to do',
@@ -22,7 +22,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     console.log(JSON.stringify(result.ops, undefined, 2))
   });
 
-  //Inserting table name(or collection name) Users
+  // creating database name 'TodoApp' and inserting data into table or  collection name 'Users'
 const db = client.db('Users');
 db.collection('Users').insertOne({
   _id: 153,
